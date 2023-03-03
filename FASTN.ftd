@@ -1,17 +1,23 @@
 -- import: fastn
 
--- fastn.package: <user_name>.github.io/<repo_name>
-download-base-url: https://raw.githubusercontent.com/<user_name>/<repo_name>/main
+-- fastn.package: gsalunke.github.io/sample-test-2
+download-base-url: https://raw.githubusercontent.com/gsalunke/sample-test-2/main
 
 -- fastn.dependency: fifthtry.github.io/doc-site
 -- fastn.dependency: fifthtry.github.io/ms-docs
 -- fastn.dependency: fifthtry.github.io/wireframe-ms
+-- fastn.dependency: fifthtry.github.io/common 
+-- fastn.dependency: fifthtry.github.io/sailing-shark-cs
+-- fastn.dependency: fifthtry.github.io/sailing-shark-typography
 
 -- fastn.auto-import: fifthtry.github.io/doc-site as ds
 -- fastn.auto-import: fifthtry.github.io/ms-docs
 -- fastn.auto-import: fifthtry.github.io/wireframe-ms
--- fastn.auto-import: <user_name>.github.io/<repo_name>/FASTN/config as my-ds
--- fastn.auto-import: <user_name>.github.io/<repo_name>/assets
+-- fastn.auto-import: gsalunke.github.io/sample-test-2/FASTN/config as my-ds
+-- fastn.auto-import: gsalunke.github.io/sample-test-2/assets
+-- fastn.auto-import: fifthtry.github.io/common 
+-- fastn.auto-import: fifthtry.github.io/sailing-shark-typography as typo
+-- fastn.auto-import: fifthtry.github.io/sailing-shark-cs as cs
 
 
 
