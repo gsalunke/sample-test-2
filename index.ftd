@@ -1,22 +1,31 @@
+-- import: gsalunke.github.io/sample-test-2/assets
+-- import: gsalunke.github.io/sample-test-2/hero as sample-test-2
 
+-- common.author-meta amitu: Amit Upadhyay
+profile: CEO
+bio-url: blog-authors/amitu/
+image: https://fifthtry.github.io/bling/-/fifthtry.github.io/bling/static/amitu.jpg
+company: FifthTry Pvt. Ltd.
 
-
+Founder CEO of FifthTry Private Limited. FifthTry is backed by Y Combinators. 
+A Banglore based start-up having development center at 91Springboard, JP Nagar,
+Banglore.
 
 -- my-ds.page: Master Hero Component
 
 
 -- ms-docs.hero-docs:
+ref: $assets.files.static.wireframes.hero.jpg
 
--- wireframe-ms.hero: Title of the hero component
-cta-text-1: Get Started
+-- sample-test-2.hero: We transform ideas into digital outcomes.
+image: https://fifthtry.github.io/ds-set-2/-/fifthtry.github.io/ds-set-2/assets/hero.svg
+cta-text-1: Demo
 cta-link-1: /
-cta-text-2: Shop now
+cta-text-2: How it works
 cta-link-2: /
-author: $wireframe-ms.amitu
-image: https://fifthtry.github.io/wireframe-ms/-/fifthtry.github.io/wireframe-ms/static/wireframes/image-icon.svg
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-incididunt ut labore et dolore magna.
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
 
 -- end: ms-docs.hero-docs
 

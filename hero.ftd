@@ -1,0 +1,168 @@
+
+
+
+
+
+
+
+
+
+-- component hero:
+caption title:
+optional string cta-text-1:
+optional string cta-link-1:
+optional string cta-text-2:
+optional string cta-link-2:
+optional $common.author-meta author: 
+optional ftd.image-src image: 
+optional body body:
+
+-- ftd.column: 
+width: fill-container
+align-content: center
+max-width: fill-container
+
+-- ftd.column: 
+width: fill-container
+padding-top.px: 100
+align-content: center
+
+
+-- ftd.text: $hero.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+text-align: center
+width: fill-container
+max-width.fixed.percent: 60
+
+-- ftd.text: 
+text: $hero.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+text-align: center
+max-width.fixed.percent: 62
+margin-top.px: 24
+
+-- ftd.row:
+width: fill-container
+align-content: center
+margin-top.px: 40
+spacing.fixed.px: 10
+
+-- cta-button: $hero.cta-text-1
+role: primary
+link: $hero.cta-link-1
+
+
+-- cta-button: $hero.cta-text-2
+link: $hero.cta-link-2
+role: primary
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $hero.image
+margin-top.px: 50
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component cta-button:
+caption title:
+optional string role:
+integer border-radius: 0
+optional string link: /
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon: 
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src: 
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
+
+-- ftd.row:
+if: {!cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+border-radius.px: $cta-button.border-radius
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-medium
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.src != NULL }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.row:
+if: {cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+border-radius.px: 30
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-small
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+white-space: nowrap
+text-align: center
+
+-- ftd.column:
+width: fill-container
+max-width: fill-container
+
+-- ftd.image:
+if: { cta-button.show-arrow }
+src: $cta-button.src
+max-width: fill-container
+
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
